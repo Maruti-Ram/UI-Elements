@@ -1,6 +1,6 @@
 # UI-Elements
 
-Icons source used in the elements: <a target=_blank> http://ionicons.com/ </a> <br>
+Icons source used in the elements: http://ionicons.com/ <br>
 Colors Source used in the elements: https://material.io/guidelines/style/color.html#color-color-palette
 
 <b>Content Post CSS</b> <br>
