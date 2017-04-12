@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Custom Check Boxes and Radio Buttons</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700'>
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @charset "UTF-8";
+/*Icons: Ionicons pack: http://ionicons.com/ */
+/*Colors: Material Colors: material.io/guidelines/style/color.html#color-color-palette */
+@font-face {
+  font-family: "Ionicons";
+  src: url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1");
+  src: url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.woff?v=2.0.1") format("woff"), url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+h3 {
+  color: #ED494E;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 2px #5C5757;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  width: 20%;
+  border: 0;
+  border-top: 2px solid #494949;
+  margin-bottom: 50px;
+}
+
+body {
+  display: block;
+  padding: 1em;
+  font-size: 1.8em;
+  background: #E9E9E9;
+  color: #424242;
+  font-family: "Roboto Slab";
+}
+
+.row {
+  display: inline-block;
+  padding: 1.2em;
+}
+
+p {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+img {
+  position: relative;
+  top: -8px;
+}
+
+div {
+  background: white;
+  display: block;
+  padding: 0.7em;
+  box-shadow: 5px 2px 8px #757575;
+  border-bottom: 1px solid #424242;
+  width: 100%;
+  position: relative;
+}
+div p {
+  background: #e60052;
+  font-size: 0.65em;
+  margin: 0;
+  padding: 0.25em;
+  letter-spacing: 1.5px;
+  position: absolute;
+  left: 0;
+  top: -25px;
+  color: white;
+  box-shadow: 1px 2px 4px #757575;
+  z-index: 2;
+}
+
+label {
+  cursor: pointer;
+}
+label input[type="checkbox"] {
+  display: none;
+}
+label input[type="checkbox"] + .label-text:before {
+  font-family: "Ionicons";
+  content: "";
+  color: #F50057;
+  display: inline-block;
+  padding-right: 0.3em;
+}
+label input[type="checkbox"]:checked + .label-text::before {
+  content: "";
+  padding-right: 0.3em;
+  color: #F50057;
+  animation: check 0.2s ease-in-out;
+}
+label input[type="checkbox"]:disabled + .label-text {
+  color: #BDBDBD;
+  cursor: not-allowed;
+}
+label input[type="checkbox"]:disabled + .label-text:before {
+  content: "";
+  cursor: not-allowed;
+  color: #BDBDBD;
+}
+label input[type="checkbox"] + .label-text2::before {
+  font-family: "Ionicons";
+  content: "";
+  color: #F50057;
+  display: inline-block;
+  padding-right: 0.3em;
+}
+label input[type="checkbox"]:checked + .label-text2::before {
+  content: "";
+  padding-right: 0.3em;
+  color: #F50057;
+  animation: check2 0.2s ease-in-out;
+}
+label input[type="checkbox"]:disabled + .label-text2 {
+  color: #BDBDBD;
+  cursor: not-allowed;
+}
+label input[type="checkbox"]:disabled + .label-text2:before {
+  content: "";
+  cursor: not-allowed;
+  color: #BDBDBD;
+}
+label input[type="radio"] {
+  display: none;
+}
+label input[type="radio"] + .label-text:before {
+  font-family: "Ionicons";
+  content: "";
+  color: #F50057;
+  display: inline-block;
+  padding-right: 0.3em;
+}
+label input[type="radio"]:checked + .label-text::before {
+  content: "";
+  padding-right: 0.3em;
+  color: #F50057;
+  animation-fill-mode: forwards;
+  animation: radio 150ms ease-in;
+}
+label input[type="radio"]:disabled + .label-text {
+  color: #BDBDBD;
+  cursor: not-allowed;
+}
+label input[type="radio"]:disabled + .label-text:before {
+  content: "";
+  cursor: not-allowed;
+  color: #BDBDBD;
+}
+
+@keyframes check {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes check2 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes radio {
+  0% {
+    transform: scale(0.1);
+  }
+  60% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <!--Icons: Ionicons pack(http://ionicons.com/) 
+Colors Material:  Colors(material.io/guidelines/style/color.html#color-color-palette) -->
+<html>
+<body>
+        <h3>CSS Checkboxes and Radio Buttons</h3>
+        <hr>
+        <span class="row">
+            <div>
+                <p>Check Boxes - 1</p>
+                <form>
+                    <label>
+                        <input type="checkbox" name="options">
+                        <span class="label-text">Option-1</span>
+                    </label>
+                    <br />
+                    <label>
+                        <input type="checkbox" name="options">
+                        <span class="label-text">Option-2</span>
+                    </label>
+                    <br />
+                    <label>
+                        <input type="checkbox" name="options">
+                        <span class="label-text">Option-3</span>
+                    </label>
+                </form>
+            </div>
+            <div>
+                <form>
+                    <label>
+                        <input type="checkbox" name="options" disabled>
+                        <span class="label-text">Disabled</span>
+                    </label>
+                </form>
+            </div>
+        </span>
+
+        <span class="row">
+            <div>
+                <p>Check Boxes - 2</p>
+                <form>
+                    <label>
+                        <input type="checkbox" name="options">
+                        <span class="label-text2">Option-1</span>
+                    </label>
+                    <br />
+                    <label>
+                        <input type="checkbox" name="options">
+                        <span class="label-text2">Option-2</span>
+                    </label>
+                    <br />
+                    <label>
+                        <input type="checkbox" name="options">
+                        <span class="label-text2">Option-3</span>
+                    </label>
+                </form>
+            </div>
+            <div>
+                <form>
+                    <label>
+                        <input type="checkbox" name="options" disabled>
+                        <span class="label-text">Disabled</span>
+                    </label>
+                </form>
+            </div>
+        </span>
+
+        <span class="row">
+            <div>
+                <p>Radio Buttons</p>
+                <form>
+                    <label>
+                        <input type="radio" name="options">
+                        <span class="label-text">Option-1</span>
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="options">
+                        <span class="label-text">Option-2</span>
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="options">
+                        <span class="label-text">Option-3</span>
+                    </label>
+                </form>
+            </div>
+            <div>
+                <form>
+                    <label>
+                        <input type="radio" name="options" disabled>
+                        <span class="label-text">Disabled</span>
+                    </label>
+                </form>
+            </div>
+        </span>
+        <p>Follow on:
+            <a href="https://www.linkedin.com/in/maruti-ram/" target="_blank">
+                <img src="https://www.ucdmc.ucdavis.edu/chpr/seminars/linked_in.png" alt="linkedIn Logo" height="120" align="middle">
+            </a>
+        </p>
+    </body>
+</html>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>

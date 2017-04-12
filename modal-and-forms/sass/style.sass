@@ -1,0 +1,373 @@
+$yellow: #FFEE58
+
+.overlays
+  position: absolute
+  background: fade-out($yellow, 0.2)
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  opacity: 0
+  pointer-events: none
+  transition: all 300ms ease-in-out
+
+  &.is-open
+    opacity: 1
+    pointer-events: auto
+
+    .modals
+      transform: translate(0, 0)
+
+.modals
+  font-family: "Maven Pro"
+  transform: translate(0, -100px)
+  transition: all 600ms cubic-bezier(0.25, 0.35, 0, 1.74)
+  max-width: 700px
+  background: white
+  padding: 20px
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4)
+  position: relative
+
+  .close-btn
+    position: absolute
+    z-index: 3
+    top: -30px
+    right: -30px
+    height: 30px
+    width: 30px
+    font-size: 30px
+    text-align: center
+    line-height: 30px
+    cursor: pointer
+    transition: all 0.25s ease-in-out
+
+    &:hover
+      transform: scale(1.2)
+
+  .text-box
+    max-width: 100%
+
+    .lead
+      color: black
+      font-size: 30px
+      line-height: 1.3
+
+    p
+      color: #999
+      font-size: 18px
+
+  .graphic
+    position: absolute
+    top: 0
+    right: 0
+    width: 256px
+    height: 280px
+
+  form
+    position: relative
+    z-index: 2
+    background: black
+    padding: 15px
+    margin: 30px -20px -20px
+    display: flex
+    flex-wrap: wrap
+
+    textarea
+      width: 100%
+      height: 140px
+      display: block
+      padding: 15px 20px
+      border: none
+      font-size: 18px
+      margin-bottom: 10px
+
+      &:focus
+        outline: none
+        box-shadow: 0 0 0 2px $yellow inset
+
+
+    input
+      height: 60px
+      border: 1px solid #000000
+      display: block
+      padding: 0 20px
+      font-size: 18px
+      margin-bottom: 6px
+      font-family: "Maven Pro"
+
+      &:focus
+        outline: none
+        box-shadow: 0 0 0 2px $yellow inset
+
+      &[type="text"]
+        border: 1px solid #000000
+        width: 35%
+
+      &[type="submit"]
+        background: $yellow
+        width: 25%
+        text-align: center
+        text-transform: uppercase
+        cursor: pointer
+        transition: all 0.2s ease-in
+
+        &:hover
+          box-shadow: 0 0 0 2px $yellow inset, 0 0 0 4px black inset
+          letter-spacing: 1.3px
+          font-weight: 700
+
+        &:active
+          transform: scale(0.9)
+
+@media (max-width: 820px)
+  .modals
+    margin: 10px
+
+    .close-btn
+      right: 0
+      font-size: 25px
+
+@media (max-width: 720px)
+  .modals
+    margin: 10px
+
+    .close-btn
+      right: 0
+      font-size: 25px
+
+@media (max-width: 718px)
+  .graphic
+    display: none
+
+  .modals
+    .text-box
+      max-width: 100%
+
+    .text-box
+      .lead
+        font-size: 22px
+        line-height: 1.3px
+
+      p
+        font-size: 18px
+
+    form
+      flex-direction: column
+      margin: 20px -20px -20px
+
+      textarea
+        margin-bottom: 0
+
+      input[type="submit"]
+        margin: 0
+        width: 50%
+
+      input[type="text"]
+        width: 100%
+
+@media (max-width: 414px)
+  .modals
+
+    .close-btn
+      top: 0
+
+    .text-box
+      .lead
+        font-size: 20px
+        line-height: 1.3px
+
+      p
+        font-size: 14px
+
+
+@media (max-width: 360px)
+  .modals
+    .close-btn
+      top: 0
+
+    .text-box
+      .lead
+        font-size: 18px
+        line-height: 1.3px
+
+      p
+        font-size: 12px
+
+    form
+      margin: 20px -20px -20px
+
+@media (max-width: 320px)
+  .modals
+    .close-btn
+      top: 0
+
+    .text-box
+      .lead
+        font-size: 15px
+        line-height: 1px
+
+      p
+        font-size: 12px
+
+    form
+      margin: 15px -20px -20px
+
+      input
+        height: 45px
+
+      textarea
+        height: 100px
+
+
+.modalactivator
+  font-family: "Roboto Slab"
+  background: black
+  color: $yellow
+  cursor: pointer
+  font-size: 15px
+  font-weight: 200
+  letter-spacing: 1px
+  position: absolute
+  top: 50%
+  left: 30%
+  text-decoration: none
+  padding: 1em 2.25em
+  transition: all 200ms ease-in
+
+  &:hover
+    background: black
+    color: $yellow
+    text-decoration: none
+    box-shadow: 0 0 0 2px black inset, 0 0 0 4px white inset
+
+  &:active
+    transform: scale(0.9)
+    text-decoration: none
+
+
+
+  .ion-chevron-right
+    font-size: 0.80em
+    margin-left: 0.25em
+
+@media (max-width: 740px)
+  .modalactivator
+    font-size: 15px
+
+@media (max-width: 650px)
+  .modalactivator
+    font-size: 12px
+
+
+.custom-select-wrapper
+  position: relative
+  display: inline-block
+  user-select: none
+
+  select
+    display: none
+
+.custom-select-trigger
+  position: relative
+  top: 1px
+  display: block
+  width: 201px
+  padding: 0 20px
+  font-size: 20px
+  color: #000
+  line-height: 58px
+  background: white
+  cursor: pointer
+  border-left: 1px solid #000
+  margin-bottom: 5px
+
+  &:after
+    position: absolute
+    display: block
+    content: ""
+    width: 10px
+    height: 10px
+    top: 50%
+    right: 25px
+    margin-top: -4px
+    border-bottom: 1px solid #000
+    border-right: 1px solid #000
+    transform: rotate(45deg) translateY(0)
+    transition: all 0.3s ease-in-out
+    transform-origin: 50% 0
+
+.custom-select.opened .custom-select-trigger:after
+  margin-top: 3px
+  transform: rotate(-135deg) translateY(-100%)
+
+.custom-options
+  position: absolute
+  display: block
+  top: 100%
+  left: 0
+  right: 0
+  min-width: 100%
+  margin: 15px 0
+  border: 1px solid $yellow
+  box-sizing: border-box
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.07)
+  background: #000
+  transition: all 0.4s ease-in-out
+  opacity: 0
+  visibility: hidden
+  pointer-events: none
+  transform: translateY(-15px)
+
+.custom-select.opened .custom-options
+  opacity: 1
+  visibility: visible
+  pointer-events: all
+  transform: translateY(0)
+
+.custom-options:before
+  position: absolute
+  display: block
+  content: ""
+  bottom: 100%
+  right: 25px
+  width: 7px
+  height: 7px
+  margin-bottom: -4px
+  border-top: 1px solid $yellow
+  border-left: 1px solid $yellow
+  background: #000
+  transform: rotate(45deg)
+  transition: all 0.4s ease-in-out
+
+.custom-option
+  font-family: "Maven Pro"
+  position: relative
+  display: block
+  padding: 0 20px
+  border-bottom: 1px solid $yellow
+  font-size: 18px
+  font-weight: 400
+  color: #fff
+  line-height: 40px
+  cursor: pointer
+  transition: all 0.4s ease-in-out
+
+  &:last-of-type
+    border-bottom: 0
+
+  &:hover, &.selection
+    background: #fff
+    color: black
+
+
+@media (max-width: 718px)
+  .custom-select-trigger
+    width: 100%
+    margin-bottom: 10px
+
+@media(max-width: 320px)
+  .custom-select-trigger
+    line-height: 45px

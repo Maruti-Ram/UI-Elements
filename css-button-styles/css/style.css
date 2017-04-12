@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,800);
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    background-color: #EFEFEF;
+}
+
+/*Heading Title Properties*/
+h2{
+    color: #ED494E;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 2px #5C5757;
+}
+
+hr{
+    width: 20%;
+    border: 0;
+    border-top: 2px solid #494949;
+    margin-bottom: 50px;
+}
+a{
+    display: inline-flex;
+		flex-wrap: wrap;
+    background: #5C5757; /* Button Default Color*/
+    margin: 30px 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    padding: .75em 2.75em;
+    font-size: 18px;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+/*Button - 1*/
+.one{
+    background: #0291EA;
+    position: relative;
+    box-shadow: 4px 4px 0px #AAAAAA;
+    top: -4px;
+    bottom: -4px;
+}
+.one:hover{
+    background: #0277BD;
+}
+.one:active{
+    top: 0px;
+    bottom: 0px;
+    box-shadow: 0px 0px 0px #0091EA;
+}
+
+/*Button - 2*/
+.two{
+    background: #D32F2F;
+}
+.two:hover{
+    box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 4px #D32F2F;
+}
+.two:active{
+	transform: scale(1.1);
+}
+
+/*Button - 3*/
+.three{
+    background: #00897B;
+}
+.three:hover{
+    box-shadow: 0px 0px 0px 2px #00897B inset, 0px 0px 0px 4px white inset;
+}
+.three:active{
+	transform: scale(0.9);
+}
+
+/*Button - 4*/
+.four{
+    background: none;
+    color: #111;
+    border: 1px solid #E02C26;
+}
+.four:hover{
+    border: 1px solid #E02C26;
+    box-shadow: 0 0 15px #FF8A80 inset, 0 0 15px #FF8A80;
+    text-shadow: 1px 1px 2px #427388;
+}
+.four:active{
+	transform: scale(1.1);
+	letter-spacing:1.5px;
+}
+
+/*Button - 5*/
+.five{
+    background: #F57F17;
+}
+.five:hover{
+    background: none;
+    color: #F57F17;
+    border: 1px solid #F57F17;
+    box-shadow: 0px 5px 10px #427388;
+}
+.five:active{
+	transform: scale(1.1);
+	box-shadow: 0px 8px 20px #427388;
+}
+
+/*Button - 6*/
+.six{
+    background: #8E24AA;
+    box-shadow: 2px 4px 15px #427388;
+}
+.six:hover{
+    background:none;
+    color:#8E24AA;
+	 	border: 1px solid #8E24AA;
+}
+.six:active{
+	transform: scale(0.9);
+}
+
+p>a{
+    background: none;
+    margin: 0px 0px;
+    color: #111;
+    padding: 0px 0px;
+    font-size: 18px;
+    letter-spacing: normal;
+}
