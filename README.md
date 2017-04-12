@@ -3,17 +3,17 @@
 Icons source used in the elements: http://ionicons.com/ <br>
 Colors Source used in the elements: https://material.io/guidelines/style/color.html#color-color-palette
 
-Content Post CSS <br>
+<b>Content Post CSS</b> <br>
 Live Working Demo: http://codepen.io/maruti_ram/pen/Wjembd
 
-CSS Buttons Styles <br>
+<b>CSS Buttons Styles</b> <br>
 Live Working Demo: http://codepen.io/maruti_ram/pen/zNjEZJ
 
-CSS Card UI <br>
+<b>CSS Card UI</b> <br>
 Live Working Demo: http://codepen.io/maruti_ram/pen/bgzoeY
 
-Modal and Forms <br>
+<b>Modal and Forms</b> <br>
 Live Working Demo: http://codepen.io/maruti_ram/pen/mWYyjP
 
-Custom CheckBoxes and Radio Buttons <br>
+<b>Custom CheckBoxes and Radio Buttons</b> <br>
 Live Working Demo: http://codepen.io/maruti_ram/pen/zZpBQg
