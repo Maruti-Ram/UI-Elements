@@ -13,11 +13,11 @@ Live Working Demo: http://codepen.io/maruti_ram/pen/zNjEZJ
 <b>CSS Card UI</b> <br>
 Live Working Demo: http://codepen.io/maruti_ram/pen/bgzoeY
 
+<b>Material Inspired Accordion</b> <br>
+Live Working Demo: https://codepen.io/maruti_ram/pen/jmPqvq
+
 <b>Modal and Forms</b> <br>
 Live Working Demo: http://codepen.io/maruti_ram/pen/mWYyjP
 
 <b>Custom CheckBoxes and Radio Buttons</b> <br>
 Live Working Demo: http://codepen.io/maruti_ram/pen/zZpBQg
-
-<b>Material Inspired Accordion</b> <br>
-Live Working Demo: https://codepen.io/maruti_ram/pen/jmPqvq
