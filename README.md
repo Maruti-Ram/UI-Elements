@@ -1,7 +1,7 @@
 # UI-Elements
 
 Icons source used in the elements: http://ionicons.com/ | https://material.io/icons/<br>
-Colors Source used in the elements: https://material.io/guidelines/style/color.html#color-color-palette
+Colors Source used in the elements: https://material.io/guidelines/style/color.html#color-color-palette <br>
 Font Source: Google Fonts (https://fonts.google.com/)
 
 <b>Content Post CSS</b> <br>
