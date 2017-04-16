@@ -8,7 +8,7 @@ Font Source: Google Fonts (https://fonts.google.com/)
 Live Working Demo: http://codepen.io/maruti_ram/pen/Wjembd
 
 <b>CSS Buttons Styles</b> <br>
-Live Working Demo: <a target="_blank">http://codepen.io/maruti_ram/pen/zNjEZJ</a>
+Live Working Demo: <a href="http://codepen.io/maruti_ram/pen/zNjEZJ" target="_blank">http://codepen.io/maruti_ram/pen/zNjEZJ</a>
 
 <b>CSS Card UI</b> <br>
 Live Working Demo: http://codepen.io/maruti_ram/pen/bgzoeY
